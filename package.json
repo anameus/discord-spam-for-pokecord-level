@@ -1,0 +1,23 @@
+{
+  "name": "discord-spam-for-pokecord-level",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anameus/discord-spam-for-pokecord-level.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anameus/discord-spam-for-pokecord-level/issues"
+  },
+  "homepage": "https://github.com/anameus/discord-spam-for-pokecord-level#readme",
+  "dependencies": {
+    "discord.js": "^11.3.2"
+  }
+}
