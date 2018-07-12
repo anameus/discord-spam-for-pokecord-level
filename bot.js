@@ -10,12 +10,14 @@ client.on("ready", () => {
 
 
 client.on("message", (message) => {
-    if (!message.content.startsWith(config.prefix) || message.author.bot) return;
+    const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
+    const command = args.shift().toLowerCase();
+    if (!command || message.author.bot) return;
   
-    if (message.content.startsWith(config.prefix + "ping")) {
+    if (command === "ping") {
       message.channel.send("pong!");
     } else
-    if (message.content.startsWith(config.prefix + "spam")) {
+    if (command === "spam") {
         function sleep(ms) {
             return new Promise(resolve => setTimeout(resolve, ms));
           }
@@ -26,7 +28,7 @@ client.on("message", (message) => {
             }
           }
           async function spamMore(){
-              for(j=0;j<3;j++){
+              for(j=0;j<args[0];j++){
                 spam();
                 await sleep(5000);
               }
