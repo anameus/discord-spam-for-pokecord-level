@@ -13,6 +13,7 @@ client.on("message", (message) => {
     const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
     if (!command || message.author.bot) return;
+    if(message.author !== client.user) return;
   
     if (command === "ping") {
       message.channel.send("pong!");
@@ -23,7 +24,9 @@ client.on("message", (message) => {
           }
           async function spam() {
             for(i=0;i<9;i++){
-                message.channel.send("<3");
+                //this.self.createMessage(msg.channel.id, "<3") 
+                //lol wut
+                message.channel.send("<3");//old code
                 await sleep(800);
             }
           }
